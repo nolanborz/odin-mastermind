@@ -6,4 +6,12 @@ class Player
   def initialize(name)
     @name = name
   end
+  
+  def submit_guess(guess_number)
+    puts display_guess_prompt(guess_number)
+    guess = gets.chomp
+    
+    return guess
+  end
+      
 end
