@@ -18,4 +18,12 @@ module Display
   def display_guess_prompt(guess_number)
     "Please submit guess \##{guess_number}. You can submit red, orange, yellow, green, blue, purple, black, or white."
   end
+
+  def display_player_guesses(player_guesses)
+    "You guessed #{player_guesses[0]}, #{player_guesses[1]}, and #{player_guesses[2]}."
+  end
+
+  def display_guess_results(right_color, right_spot, guess_number)
+    "Correct color wrong spot: #{right_color}.\nCorrect color correct spot: #{right_spot}.\nThis was guess \##{guess_number}.\n"
+  end
 end

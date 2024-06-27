@@ -12,6 +12,15 @@ class Game
   
   def play_game
     game_setup
+    game_loop
+
+  end
+
+  def game_loop
+    for i in 1..5 do 
+      process_guesses(get_player_guesses, i)
+    end
+
   end
 
   def game_setup
@@ -31,5 +40,23 @@ class Game
     return @color_arr.shuffle.take(3)
   end
 
-  
+  def get_player_guesses
+    puts @color_answers
+    guess_arr = []
+    until guess_arr.length == 3
+      puts "Current guess arr #{guess_arr}"
+      guess_arr.push(@player.submit_guess(guess_arr.length + 1))
+    end
+    puts "This was the guess#{guess_arr}"
+    return guess_arr
+  end
+  def process_guesses(guesses, guess_number)
+    right_spot = 0
+    right_color = 0
+    for x in guesses
+      if @color_answers.include?(x) then right_color +=1
+      end
+    end
+    puts display_guess_results(right_color, right_spot, guess_number)
+  end
 end

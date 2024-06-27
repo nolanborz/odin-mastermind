@@ -1,6 +1,8 @@
 require_relative 'player.rb'
 require_relative 'display.rb'
+require_relative 'game.rb'
 class Player
+  include Display
   attr_accessor :name
 
   def initialize(name)
