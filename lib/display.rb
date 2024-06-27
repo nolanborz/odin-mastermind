@@ -42,4 +42,12 @@ module Display
   def display_goodbye_message
     "Thanks for playing!"
   end
+  def display_comp_guess_prompt(guess_num)
+    sleep(1)
+    "And here comes guess \##{guess_num} for Megatron."
+  end
+  def display_pick_or_guess
+    "Would you like to pick the colors or guess the colors?\nPress 'p' for pick or 'g' for guess."
+  end
+
 end

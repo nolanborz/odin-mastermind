@@ -1,6 +1,7 @@
 require_relative 'player.rb'
 require_relative 'display.rb'
 require_relative 'game.rb'
+require_relative 'comp.rb'
 def play_mastermind 
   play = Game.new
   play.play_game

@@ -1,5 +1,6 @@
 require_relative 'player.rb'
 require_relative 'display.rb'
+require_relative 'comp.rb'
 
 class Game
   include Display
@@ -7,7 +8,7 @@ class Game
   def initialize
     @player = nil
     @color_answers = nil
-    @color_arr = ['red', 'orange', 'yellow', 'blue', 'green', 'purple', 'white', 'black']
+    @@color_arr = ['red', 'orange', 'yellow', 'blue', 'green', 'purple', 'white', 'black']
     @right_spot = nil
     @game_won = false
   end
@@ -43,7 +44,7 @@ class Game
   end
 
   def generate_random_colors
-    return @color_arr.shuffle.take(3)
+    return @@color_arr.shuffle.take(3)
   end
 
   def get_player_guesses
