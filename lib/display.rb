@@ -16,7 +16,7 @@ module Display
   end
   
   def display_guess_prompt(guess_number)
-    "Please submit guess \##{guess_number}. You can submit red, orange, yellow, green, blue, purple, black, or white."
+    "Please submit guess \##{guess_number}."
   end
 
   def display_player_guesses(player_guesses)
@@ -24,6 +24,14 @@ module Display
   end
 
   def display_guess_results(right_color, right_spot, guess_number)
-    "Correct color wrong spot: #{right_color}.\nCorrect color correct spot: #{right_spot}.\nThis was guess \##{guess_number}.\n"
+    "Correct color wrong spot: #{right_color}.\nCorrect color correct spot: #{right_spot}.\n#{5 - guess_number} guess(es) remaining.\n"
+  end
+
+  def display_game_won
+    "Congratulations, you're a weiner!"
+  end
+
+  def display_game_loss(color1, color2, color3)
+    "Sorry pal, you're fresh out of chances. The answers were #{color1}, #{color2}, and #{color3}, in that order."
   end
 end
