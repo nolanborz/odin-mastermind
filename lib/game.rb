@@ -15,11 +15,10 @@ class Game
   def play_game
     game_setup
     game_loop
-
   end
 
   def game_loop
-    
+    @color_answers = generate_random_colors
     for i in 1..5 do 
       process_guesses(get_player_guesses, i)
       if @right_spot == 3 then game_won_procedures; @game_won = true
@@ -35,7 +34,6 @@ class Game
     @player = create_player
     puts "Ok, so your name is #{self.player.name}.\nLet's play some Mastermind."
     sleep(1)
-    @color_answers = generate_random_colors
   end
   
   def create_player

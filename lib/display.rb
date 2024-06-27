@@ -34,4 +34,12 @@ module Display
   def display_game_loss(color1, color2, color3)
     "Sorry pal, you're fresh out of chances. The answers were #{color1}, #{color2}, and #{color3}, in that order."
   end
+
+  def display_ask_restart_game
+    "Want to play again? Enter y for 'yes' or n for 'no'."
+  end
+
+  def display_goodbye_message
+    "Thanks for playing!"
+  end
 end
