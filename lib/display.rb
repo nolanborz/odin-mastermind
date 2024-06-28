@@ -15,8 +15,8 @@ module Display
     'Enter 1 color at a time, 3 times, to make your guess.\nUsing the feedback, continue guessing until you guess all 3 colors in the correct positions!'
   end
   
-  def display_guess_prompt(guess_number)
-    "Please submit guess \##{guess_number}."
+  def display_entry_prompt(entry_number)
+    "Please submit entry \##{entry_number}."
   end
 
   def display_player_guesses(player_guesses)
@@ -49,5 +49,6 @@ module Display
   def display_pick_or_guess
     "Would you like to pick the colors or guess the colors?\nPress 'p' for pick or 'g' for guess."
   end
+
 
 end

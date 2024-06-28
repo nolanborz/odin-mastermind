@@ -9,8 +9,8 @@ class Player
     @name = name
   end
   
-  def submit_guess(guess_number)
-    puts display_guess_prompt(guess_number)
+  def submit_color(guess_number)
+    puts display_entry_prompt(guess_number)
     guess = gets.chomp
     
     return guess

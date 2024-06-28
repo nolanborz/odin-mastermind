@@ -1,16 +1,17 @@
 require_relative 'display.rb'
 require_relative 'game.rb'
-class Comp
+class Cpu
+  
   include Display
   attr_accessor :name
   def initialize
     @name = 'Megatron'
+    @@color_arr = ['red', 'orange', 'yellow', 'blue', 'green', 'purple', 'white', 'black']
   end
   
-  def submit_guess(guess_number)
-    puts display_comp_guess_prompt(guess_number)
-    guess = @@color_arr.shuffle.take(1)
-    return guess
+  def submit_color
+    color = @@color_arr.shuffle.take(1)
+    return color[0]
   end
       
 end
